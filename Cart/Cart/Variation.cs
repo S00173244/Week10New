@@ -8,5 +8,24 @@ namespace Cart
 {
     class Variation
     {
+        string type;
+
+        public Variation(string t)
+        {
+            type = t;
+        }
+
+        public string Type
+        {
+            get
+            {
+                return type;
+            }
+
+            set
+            {
+                type = value;
+            }
+        }
     }
 }
