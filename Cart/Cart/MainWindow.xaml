@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cart"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="461.645" Width="862.325" Loaded="Window_Loaded">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150*"/>
+            <RowDefinition Height="169*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="lbl_products" Content="Products" HorizontalAlignment="Left" Margin="58,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_cart" Content="Cart" HorizontalAlignment="Left" Margin="514,43,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="lbox_products" HorizontalAlignment="Left" Height="154" Margin="42,87,0,0" VerticalAlignment="Top" Width="306" Grid.RowSpan="2"/>
+        <ListBox x:Name="lbox_cart" HorizontalAlignment="Left" Height="154" Margin="514,87,0,0" VerticalAlignment="Top" Width="315" Grid.RowSpan="2"/>
+        <Button x:Name="btn_addToCart" Content="Add To Cart" HorizontalAlignment="Left" Margin="390,120,0,0" VerticalAlignment="Top" Width="75" Click="btn_addToCart_Click"/>
+        <Button x:Name="btn_rmvFromCart" Content="Remove From Cart" HorizontalAlignment="Left" Margin="370,37,0,0" VerticalAlignment="Top" Width="123" Grid.Row="1" Click="btn_rmvFromCart_Click"/>
+        <Button x:Name="btn_addTax" Content="Add Tax" HorizontalAlignment="Left" Margin="58,68,0,0" VerticalAlignment="Top" Width="75" Grid.Row="1" Click="btn_addTax_Click"/>
+        <Button x:Name="btn_exit" Content="Exit" HorizontalAlignment="Left" Margin="244,68,0,0" VerticalAlignment="Top" Width="75" Grid.Row="1" IsCancel="True"/>
+        <Label x:Name="lbl_bikeType" Content="Bike Type" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="58,51,0,0"/>
+        <Label x:Name="lbl_shippingDate" Content="Shipping Date:" HorizontalAlignment="Left" Margin="514,130,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label x:Name="lbl_calculatedCost" Content="" HorizontalAlignment="Left" Margin="658,101,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label x:Name="lbl_totalCost" Content="Total Cost:" HorizontalAlignment="Left" Margin="514,101,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Button x:Name="btn_calculateShippingDate" Content="Calculate Shipping Date" HorizontalAlignment="Left" Margin="575,173,0,0" Grid.Row="1" VerticalAlignment="Top" Width="188"/>
+        <ComboBox x:Name="cbox_bikeType" HorizontalAlignment="Left" Margin="199,51,0,0" VerticalAlignment="Top" Width="120"/>
     </Grid>
+    
+    
 </Window>
